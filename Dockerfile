@@ -20,17 +20,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     nload \
     iftop \
     procps \
-    docker.io
-    # docker.io \
-    # && rm -rf /var/lib/apt/lists/*
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh
+    && rm -rf /var/lib/apt/lists/*
 
-ENV NODE_VERSION=24.13.1    
-RUN nvm install $NODE_VERSION
-ENV PATH=/root/.nvm/versions/node/$NODE_VERSION/bin:$PATH 
+ENV NODE_VERSION=24.13.1
+ENV NVM_DIR=/root/.nvm
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash \
+    && bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION"
+ENV PATH=/root/.nvm/versions/node/v$NODE_VERSION/bin:$PATH
 RUN npm install -g openclaw@latest
 
-EXPOSE 18789
-VOLUME ["/root/.openclaw"]
-ENTRYPOINT ["tini"]
-CMD ["--", "/entrypoint.sh"]
+COPY entrypoint.sh /entrypoint.sh
+COPY setup.sh /setup.sh
+RUN chmod +x /entrypoint.sh /setup.sh
+
+ENTRYPOINT ["tini", "--"]
+CMD ["/entrypoint.sh"]

@@ -30,7 +30,7 @@ echo " Optional: fine-tune with CLI"
 echo "--------------------------------------------"
 echo
 echo "  # Change default model"
-echo "  openclaw config set agents.defaults.model \"anthropic/claude-opus-4-5-20250514\""
+echo "  openclaw config set agents.defaults.model \"anthropic/claude-opus-4.6\""
 echo
 echo "  # Enable Telegram"
 echo "  openclaw config set channels.telegram.enabled true"

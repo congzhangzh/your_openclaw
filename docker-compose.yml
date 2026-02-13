@@ -2,12 +2,18 @@ services:
   openclaw:
     build: .
     container_name: openclaw
-    stdin_open: true # TODO: maybe remove this
-    tty: true # TODO: maybe remove this
     ports:
-      - "18789:127.0.0.1:18789"
+      - "127.0.0.1:${OPENCLAW_PORT:-18789}:18789"
     volumes:
-      - ~/.openclaw:/root/.openclaw
+      - ${OPENCLAW_DATA:-~/.openclaw}:/root/.openclaw
+      - ./entrypoint.sh:/entrypoint.sh:ro
+      - ./setup.sh:/setup.sh:ro
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:18789"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
