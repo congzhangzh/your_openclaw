@@ -1,0 +1,8 @@
+# Secrets — NEVER commit
+.env
+
+# OpenClaw data (lives on host, not in repo)
+.openclaw/
+
+# Docker
+docker-compose.override.yml

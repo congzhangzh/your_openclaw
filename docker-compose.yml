@@ -1,0 +1,13 @@
+services:
+  openclaw:
+    build: .
+    container_name: openclaw
+    stdin_open: true # TODO: maybe remove this
+    tty: true # TODO: maybe remove this
+    ports:
+      - "18789:127.0.0.1:18789"
+    volumes:
+      - ~/.openclaw:/root/.openclaw
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
