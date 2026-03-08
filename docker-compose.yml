@@ -2,12 +2,12 @@ services:
   openclaw:
     build: .
     container_name: openclaw
+    stdin_open: true          # keep bash alive (docker run -i)
+    tty: true                 # allocate pseudo-TTY (docker run -t)
     ports:
       - "127.0.0.1:${OPENCLAW_PORT:-18789}:18789"
     volumes:
       - ${OPENCLAW_DATA:-~/.openclaw}:/root/.openclaw
-      - ./entrypoint.sh:/entrypoint.sh:ro
-      - ./setup.sh:/setup.sh:ro
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true

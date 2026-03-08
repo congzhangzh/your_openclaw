@@ -4,9 +4,23 @@
 # Start gateway inside: openclaw gateway --port 18789 --verbose --bind lan
 set -e
 cd "$(dirname "$0")"
-docker compose up --build &> /dev/null &
-until [ "$(docker inspect -f '{{.State.Running}}' openclaw 2>/dev/null)" = "true" ]; do sleep 1; done
 
+G=$'\033[32m' D=$'\033[2m' R=$'\033[0m'
+
+printf "${G}⚡ Building & starting OpenClaw container...${R}\n"
+printf "${D}   Tip: first build pulls ~500 MB base image. Rebuilds are cached and fast.${R}\n"
+printf "${D}   Force rebuild: docker compose build --no-cache${R}\n"
+
+printf "${G}🧹 Stopping previous container...${R}\n"
+docker compose down -t 1 &> /dev/null
+docker compose up --build &> /dev/null &
+printf "${G}ᗧ··· Waiting to start${R}"
+while [ "$(docker inspect -f '{{.State.Running}}' openclaw 2>/dev/null)" != "true" ]; do
+  printf "${G}.${R}"
+  sleep 1
+done
+printf " ${G}ready!${R}\n"
+printf "\n${G}>>>>>>>>>>>>>>>>>>>  Déjà vu and Have a lot of fun!  <<<<<<<<<<<<<<<<<<<${R}\n"
 C=$'\033[36m' G=$'\033[32m' Y=$'\033[33m' D=$'\033[2m' B=$'\033[1m' R=$'\033[0m'
 W=62; rule=$(printf '═%.0s' $(seq 1 $W))
 p() { local s; s=$(printf '%s' "$1" | sed $'s/\033\\[[0-9;]*m//g'); printf '%s%s%*s%s\n' "${C}║${R}" "$1" "$((W-${#s}))" "" "${C}║${R}"; }
