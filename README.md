@@ -189,6 +189,67 @@ judgement._
 
 ---
 
+## 🤖 Recommended AI API Providers
+
+OpenClaw supports multiple AI backends. Here are two we recommend:
+
+> **Disclosure:** Links below are referral links. They help support this project
+> at no extra cost to you. **These are ads — just for fun.** 🎉
+
+> **Personal note:** MiniMax has been a great experience for us. We haven't
+> tried GLM / 智谱 yet — we'd genuinely love to hear real-world feedback!
+>
+> 🗳️ **We're also collecting real-world usage reports on Chinese AI models**
+> (MiniMax, GLM / 智谱, DeepSeek, Qwen, etc.) — how they perform for coding,
+> chat, and daily use. If you have first-hand experience, please share it in the
+> [**Discussions**](https://github.com/congzhangzh/your_openclaw/discussions)
+> board! Your feedback helps the whole community make better choices. 🙏
+>
+> 🗳️ **我们也在收集中国 AI 模型的真实使用体验**（MiniMax、智谱 GLM、DeepSeek、
+> 通义千问等）—— 编程、对话、日常使用效果如何？欢迎到
+> [**讨论区**](https://github.com/congzhangzh/your_openclaw/discussions)
+> 分享你的实际感受，帮助社区做出更好的选择！🙏
+
+### MiniMax
+
+High-quality AI models with excellent coding support.
+
+🌍 **International:**
+
+🎁 MiniMax Coding Plan New Year Mega Offer! Invite friends and earn rewards for
+both! Exclusive **10% OFF** for friends. Ready-to-use API vouchers for you!
+
+[**→ Get Started with MiniMax (International)**](https://platform.minimax.io/subscribe/coding-plan?code=IYLFo6qc8r&source=link)
+
+🇨🇳 **中国大陆：**
+
+🎁 MiniMax 跨年福利来袭！邀好友享 Coding Plan 双重好礼，助力开发体验！ 好友立享
+**9折** 专属优惠 + Builder 权益，你赢返利 + 社区特权！
+
+[**→ 立即参与 MiniMax (中国)**](https://platform.minimaxi.com/subscribe/coding-plan?code=8ySx8SRNns&source=link)
+
+### GLM / 智谱
+
+Full support for Claude Code, Cline, and 20+ top coding tools — starting at just
+$10/month.
+
+🌍 **International:**
+
+🚀 You've been invited to join the GLM Coding Plan! Enjoy full support for
+Claude Code, Cline, and 20+ top coding tools. Subscribe now and grab the
+limited-time deal!
+
+[**→ Get Started with GLM (International)**](https://z.ai/subscribe?ic=OPZVLGQQTH)
+
+🇨🇳 **中国大陆：**
+
+🚀 速来拼好模，智谱 GLM Coding 超值订阅，邀你一起薅羊毛！Claude Code、Cline 等
+20+ 大编程工具无缝支持，"码力"全开，越拼越爽！立即开拼，享限时惊喜价！
+
+[**→ 立即参与智谱 GLM (中国)**](https://www.bigmodel.cn/glm-coding?ic=2YBOSDW8RP)
+
+---
+
 ## 🔗 References
 
 - [OpenClaw](https://github.com/nicepkg/openclaw) — the AI gateway
