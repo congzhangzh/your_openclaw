@@ -1,5 +1,5 @@
-# Your OpenClaw — Full Welcome Experience
-# Real ./shell + real openclaw onboard (overview, then Ctrl+C) + gateway
+# Your OpenClaw — Welcome Experience
+# Real ./shell → banner → onboard peek → gateway → detach
 # Run: vhs demos/welcome.tape
 
 Output demos/welcome.gif
@@ -16,45 +16,34 @@ Set Padding 20
 Set BorderRadius 8
 Set PlaybackSpeed 0.75
 
-# Step 1: Launch ./shell
+# Launch
 Type "./shell"
 Sleep 500ms
 Enter
-Sleep 15s
+Sleep 6s
 
-# Step 2: Run real openclaw onboard — just show a quick overview
+# Onboard — wait 50s for security warning to fully render
 Type "openclaw onboard"
 Sleep 300ms
 Enter
-Sleep 5s
+Sleep 50s
 
-# "I understand this is powerful..." → Yes
+# Agree to security warning
+Type "y"
 Enter
-Sleep 4s
-
-# QuickStart mode → Enter (default)
-Enter
-Sleep 4s
-
-# Model/auth provider → navigate down to MiniMax
-Down 5
 Sleep 1s
-Enter
+
+# Cancel — we've shown the flow
+Ctrl+C
 Sleep 4s
 
-# Show the auth method menu briefly, then cancel
-# We've shown enough of the flow — Ctrl+C to exit
-Sleep 2s
-Ctrl+C
-Sleep 2s
-
-# Step 3: Start gateway
+# Start gateway
 Type "openclaw gateway --verbose"
 Sleep 300ms
 Enter
 Sleep 5s
 
-# Step 4: Ctrl+P, Ctrl+Q to detach
+# Detach — gateway keeps running
 Ctrl+P
 Ctrl+Q
 Sleep 2s

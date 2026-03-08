@@ -20,8 +20,10 @@
 
 ## 🧠 Philosophy
 
-1. **🔒 Safety first.** Docker isolation → Tini signals → OpenClaw sandbox → Token auth → Device approval. Layers you can verify.
-2. **🎉 Have fun, iterate fast, get your hands dirty.** `./shell` and you're in. Break things, fix things, learn things.
+1. **🔒 Safety first.** Docker isolation → Tini signals → OpenClaw sandbox →
+   Token auth → Device approval. Layers you can verify.
+2. **🎉 Have fun, iterate fast, get your hands dirty.** `./shell` and you're in.
+   Break things, fix things, learn things.
 3. **✨ Keep it simple.** One command to start. Plain files on disk. No magic.
 
 ## ⚡ Quickstart
@@ -54,9 +56,10 @@ openclaw gateway --verbose    # start the AI gateway
 | Demo                                | What it shows                                 |
 | ----------------------------------- | --------------------------------------------- |
 | ![Quickstart](demos/quickstart.gif) | `./shell` → gateway → `Ctrl+P, Ctrl+Q` detach |
-| ![Onboard](demos/onboard.gif)       | `openclaw onboard` guided configuration       |
-| ![Config](demos/config.gif)         | `openclaw config get` / `set`                 |
-| ![Pairing](demos/pairing.gif)       | Add Telegram channel → approve device         |
+
+<!-- | ![Onboard Ongoing](demos/onboard.gif) | `openclaw onboard` guided configuration       |
+| ![Config Ongoing](demos/config.gif)   | `openclaw config get` / `set`                 |
+| ![Pairing Ongoing](demos/pairing.gif) | Add Telegram channel → approve device         | -->
 
 ---
 
@@ -131,15 +134,18 @@ docker compose restart openclaw
 
 ## 🔐 VPS Disk Encryption + Compression
 
-Your AI data deserves protection. We recommend encrypted + compressed filesystems for VPS deployments.
+Your AI data deserves protection. We recommend encrypted + compressed
+filesystems for VPS deployments.
 
 ### Option A: LVM (LUKS) + Btrfs with Compression (Recommended)
 
-Battle-tested, widely supported. Transparent compression saves disk space on logs and workspaces.
+Battle-tested, widely supported. Transparent compression saves disk space on
+logs and workspaces.
 
 ### Option B: ZFS on Root (Native Encryption — Use with Care)
 
-Powerful but opinionated. See our guide: [**ZFS on Debian**](https://github.com/congzhangzh/zfs-on-debian)
+Powerful but opinionated. See our guide:
+[**ZFS on Debian**](https://github.com/congzhangzh/zfs-on-debian)
 
 ---
 
@@ -147,13 +153,17 @@ Powerful but opinionated. See our guide: [**ZFS on Debian**](https://github.com/
 
 Entry-level plans are more than enough for OpenClaw. Here's what we like:
 
+> **Disclosure:** Links below are affiliate links. They help support this
+> project at no extra cost to you.
+
 ### Hetzner Cloud
 
 Rock-solid European infrastructure. Outstanding price-to-performance.
 
 - **Pick:** CX22 (2 vCPU, 4 GB RAM, 40 GB) — plenty for OpenClaw
 - **Location:** Helsinki (Finland) — clean energy, sustainable pricing long-term
-- **Why we like it:** Stable performance, no billing surprises, 10 Gbps burst networking, cancel anytime
+- **Why we like it:** Stable performance, no billing surprises, 10 Gbps burst
+  networking, cancel anytime
 
 [**→ Get Started with Hetzner Cloud**](https://hetzner.cloud/?ref=QuqTJEEjeiIf)
 
@@ -162,16 +172,28 @@ Rock-solid European infrastructure. Outstanding price-to-performance.
 Canadian provider with surprisingly good value on high-storage VPS plans.
 
 - **Pick:** Any 4 GB RAM plan
-- **Why we like it:** Generous storage, stable networking, Canadian hydroelectric energy = sustainable pricing
+- **Why we like it:** Clean IPs, generous storage, stable networking, Canadian
+  hydroelectric energy = sustainable pricing
 
 [**→ Get Started with Servarica**](https://clients.servarica.com/aff.php?aff=1238)
+
+### Kuroit ⚠️
+
+UK-based provider. Clean IPs. _We haven't used them long — proceed with your own
+judgement._
+
+- **Why it's here:** Clean IP reputation, competitive pricing
+- **Caveat:** Relatively new to us — do your own due diligence
+
+[**→ Get Started with Kuroit**](https://my.kuroit.com/aff.php?aff=447)
 
 ---
 
 ## 🔗 References
 
 - [OpenClaw](https://github.com/nicepkg/openclaw) — the AI gateway
-- [MiniMax × OpenClaw](https://platform.minimax.io/docs/coding-plan/openclaw) — MiniMax integration guide
+- [MiniMax × OpenClaw](https://platform.minimax.io/docs/coding-plan/openclaw) —
+  MiniMax integration guide
 - [ZAI Models (HuggingFace)](https://huggingface.co/zai-org)
 - [MiniMax (HuggingFace)](https://huggingface.co/MiniMaxAI)
 - [Lark / 飞书](https://www.larksuite.com/)
