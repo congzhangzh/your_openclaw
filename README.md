@@ -53,11 +53,12 @@ openclaw gateway --verbose    # start the AI gateway
 
 > **Generate these GIFs:** run `vhs demos/<name>.tape` on a machine with Docker.
 
-| Demo                                | What it shows                                 |
-| ----------------------------------- | --------------------------------------------- |
-| ![Quickstart](demos/quickstart.gif) | `./shell` → gateway → `Ctrl+P, Ctrl+Q` detach |
+| Demo                          | What it shows                                           |
+| ----------------------------- | ------------------------------------------------------- |
+| ![Welcome](demos/welcome.gif) | `./shell` → onboard → gateway → `Ctrl+P, Ctrl+Q` detach |
 
-<!-- | ![Onboard Ongoing](demos/onboard.gif) | `openclaw onboard` guided configuration       |
+<!-- | ![Quickstart](demos/quickstart.gif) | `./shell` → gateway → `Ctrl+P, Ctrl+Q` detach |
+| ![Onboard Ongoing](demos/onboard.gif) | `openclaw onboard` guided configuration       |
 | ![Config Ongoing](demos/config.gif)   | `openclaw config get` / `set`                 |
 | ![Pairing Ongoing](demos/pairing.gif) | Add Telegram channel → approve device         | -->
 
@@ -172,8 +173,8 @@ Rock-solid European infrastructure. Outstanding price-to-performance.
 Canadian provider with surprisingly good value on high-storage VPS plans.
 
 - **Pick:** Any 4 GB RAM plan
-- **Why we like it:** Clean IPs, generous storage, stable networking, Canadian
-  hydroelectric energy = sustainable pricing
+- **Why we like it:** Clean IPs, 10 Gbps, generous storage, stable networking,
+  Canadian hydroelectric energy = sustainable pricing
 
 [**→ Get Started with Servarica**](https://clients.servarica.com/aff.php?aff=1238)
 
@@ -182,7 +183,7 @@ Canadian provider with surprisingly good value on high-storage VPS plans.
 UK-based provider. Clean IPs. _We haven't used them long — proceed with your own
 judgement._
 
-- **Why it's here:** Clean IP reputation, competitive pricing
+- **Why it's here:** Clean IP reputation, 10 Gbps,competitive pricing
 - **Caveat:** Relatively new to us — do your own due diligence
 
 [**→ Get Started with Kuroit**](https://my.kuroit.com/aff.php?aff=447)
